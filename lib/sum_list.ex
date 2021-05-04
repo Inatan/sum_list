@@ -12,7 +12,12 @@ defmodule SumList do
       :world
 
   """
-  def hello do
-    :world
+  def sum([], acc) do
+    acc
+  end
+
+  def sum([head | tail], acc) do
+    acc = head + acc
+    sum(tail, acc)
   end
 end
